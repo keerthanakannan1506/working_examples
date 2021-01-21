@@ -4,3 +4,7 @@
 </p>
 <input (keyup)="onKey($event)">
 <p>{{values}}</p>
+<input #box (keyup)="0">
+    <p>{{box.value}}</p>
+     <input #box (keyup.enter)="onEnter(box.value)">
+    <p>{{value}}</p>
