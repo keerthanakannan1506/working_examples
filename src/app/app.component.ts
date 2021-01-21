@@ -6,5 +6,19 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+   clickMessage = '';
+     values = '';
+
+
+  onClickMe() {
+    this.clickMessage = 'keekee!';
+  }
+
+  onKey(event: any)
+   { // without type info
+
+   console.log(event);
+  
+    this.values += event.target.value + ' $ ';
+  }
 }
